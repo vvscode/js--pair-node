@@ -1,0 +1,28 @@
+{
+  "name": "mocha-boilerplate",
+  "version": "0.0.1",
+  "description": "Boilerplate for unit testing node.js applications",
+  "keywords": [
+    "mocha",
+    "sinon",
+    "chai",
+    "pair-programming"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vvscode/js--pair-node"
+  },
+  "license": "FTL",
+  "author": "Vasiliy @vvscode Vanchuk",
+  "dependencies": {},
+  "devDependencies": {
+    "sinon": "^6.2.0",
+    "chai": "4.1.2",
+    "mocha": "5.2.0",
+    "nodemon": "^1.18.4"
+  },
+  "scripts": {
+    "test": "mocha --timeout 10000 --recursive './{,!(node_modules)/**}/*.test.js'",
+    "test:dev": "nodemon --ext js --watch ./ --exec npm test --delay 1"
+  }
+}
